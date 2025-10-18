@@ -27,3 +27,22 @@ li{
 .botonNav:hover {
   background-color: rgba(210, 39, 126, 0.5);
 }
+@media (max-width: 992px) { /* cuando es móvil/tablet */
+  .navbar-collapse {
+    position: absolute;
+    top: 56px; /* altura del navbar, ajusta según tu navbar */
+    right: 0;
+    left: 0;
+    background-color: #343a40; /* mismo color de tu navbar */
+    z-index: 999; /* para que quede encima del contenido */
+    padding: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+}
