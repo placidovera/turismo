@@ -8,37 +8,52 @@ const NavBar = ({ cambiarEstado }) => {
       <div className="container-fluid">
         <a className="navbar-brand" href="#">Paquetes Turísticos</a>
 
-        {/* Botón hamburguesa */}
+        {/* Botón hamburguesa visible solo en móviles */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler d-lg-none"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Contenedor del menú */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav text-center">
-            <li className="nav-item">
-              <a className="nav-link" href="#vuelos">Vuelos</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#bus">Bus</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#pack">Pack</a>
-            </li>
-            <li className="nav-item">
-              <button className="btn btn-outline-light ms-2" onClick={cambiarEstado}>
-                Contactanos
-              </button>
-            </li>
-          </ul>
+
+
+        {/* Offcanvas para móvil */}
+        <div
+          className="offcanvas offcanvas-end"
+          tabIndex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+        >
+          <div className="offcanvas-header">
+            <h5 id="mobileMenuLabel">Paquetes Turísticos</h5>
+            <button
+              type="button"
+              className="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="offcanvas-body">
+            <ul className="navbar-nav text-center">
+              <li className="nav-item"><a className="nav-link" href="#vuelos">Vuelos</a></li>
+              <li className="nav-item"><a className="nav-link" href="#bus">Bus</a></li>
+              <li className="nav-item"><a className="nav-link" href="#pack">Pack</a></li>
+             <li className="nav-item">
+  <button
+    className="botonNav"
+    onClick={cambiarEstado}
+    data-bs-dismiss="offcanvas"
+  >
+    Contactanos
+  </button>
+</li>
+
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
