@@ -1,12 +1,14 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./NavBar.css";
 
 const NavBar = ({ cambiarEstado }) => {
   return (
-    <nav className="navbar navbar-expand-lg custom-navbar">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <h1 className="navbar-brand">Paquetes Turísticos</h1>
+        <a className="navbar-brand" href="#">Paquetes Turísticos</a>
 
-        {/* Botón hamburguesa (toggler) */}
+        {/* Botón hamburguesa */}
         <button
           className="navbar-toggler"
           type="button"
@@ -19,7 +21,7 @@ const NavBar = ({ cambiarEstado }) => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Contenedor colapsable */}
+        {/* Contenedor del menú */}
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav text-center">
             <li className="nav-item">
@@ -31,8 +33,10 @@ const NavBar = ({ cambiarEstado }) => {
             <li className="nav-item">
               <a className="nav-link" href="#pack">Pack</a>
             </li>
-            <li className="nav-item botonNav" onClick={cambiarEstado}>
-              Contactanos
+            <li className="nav-item">
+              <button className="btn btn-outline-light ms-2" onClick={cambiarEstado}>
+                Contactanos
+              </button>
             </li>
           </ul>
         </div>
