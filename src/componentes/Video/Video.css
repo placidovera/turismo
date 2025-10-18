@@ -1,0 +1,21 @@
+.video {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-video {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+ display: none;
+  }
+
+}

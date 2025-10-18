@@ -1,0 +1,38 @@
+.animacion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #b3e5fc, #e1f5fe);
+  padding: 40px 0;
+}
+
+.marquee {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0077b6;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.marquee span {
+  margin: 0 50px;
+}
+
+.flores {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+}
+
+.flor {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.8s ease;
+}
+
+.flor:hover {
+  transform: rotate(360deg) scale(1.2);
+  cursor: pointer;
+}

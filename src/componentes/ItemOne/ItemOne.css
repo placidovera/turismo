@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+   max-width: 400px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px 20px 50px 20px;
+}
+.row{
+    background-color: transparent;
+    display: flex;
+   
+}
+.boton{
+    border: solid 2px #555555;
+    max-width: 200px;
+    border-radius: 20px;
+    text-align: center;
+    padding:5px;
+
+}
+.col{
+ padding-top: 10px;
+}
+h2{
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+
+.container {
+   padding-left: 20px; /* reduce el espacio lateral */
+    max-width: 90%; 
+}
+    
+}

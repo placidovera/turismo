@@ -1,0 +1,29 @@
+ul{
+  display: flex;
+  gap: 2rem;
+  color: white;
+}
+li{
+ padding: 5px;
+ margin: 5px;
+ margin-top: 10px;
+ list-style: none;
+ font-size: 1.5rem;
+ line-height: 1.1;
+}
+
+.botonNav {
+  border: solid 2px #555555;
+  border-radius: 30px;
+  padding: 10px 0;
+  width: 300px;
+  text-align: center;
+  background-color: rgba(210, 39, 126, 0.2);
+  color:white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.botonNav:hover {
+  background-color: rgba(210, 39, 126, 0.5);
+}
