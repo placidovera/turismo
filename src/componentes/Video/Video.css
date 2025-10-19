@@ -15,7 +15,13 @@
 
 @media (max-width: 768px) {
   .banner {
- display: none;
+ 
+    position: absolute;
+    top: 21rem;
+    right: 1rem;
+    width: 310px;
+    height: auto;
+    overflow: hidden;
+}
   }
 
-}

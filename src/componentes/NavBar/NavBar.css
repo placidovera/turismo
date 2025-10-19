@@ -1,27 +1,26 @@
-/* estilos generales de ul/li */
+/* --- Estilos base --- */
 ul {
   display: flex;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  color: white;
+  align-items: center;
 }
 
 li {
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.2;
+  padding: 5px;
+  margin: 5px;
+  list-style: none;
+  font-size: 1.3rem;
 }
 
-/* botón */
 .botonNav {
   border: solid 2px #555555;
   border-radius: 30px;
-  padding: 5px 10px;
+  padding: 10px 0;
+  width: 200px;
   text-align: center;
   background-color: rgba(210, 39, 126, 0.2);
-  color:white;
+  color: white;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -30,37 +29,52 @@ li {
   background-color: rgba(210, 39, 126, 0.5);
 }
 
-/* ajustes para móviles */
-@media (max-width: 992px) {
+/* --- VISTA ESCRITORIO --- */
+@media (min-width: 992px) {
+  /* mostramos el menú dentro del nav */
   .offcanvas {
-    width: 100% !important;   /* ocupar todo el ancho */
-    max-width: 100% !important;
+    position: static;
+    transform: none;
+    visibility: visible;
+    display: flex !important;
+    background: transparent;
   }
 
   .offcanvas-body {
-    height: 100vh;            /* ocupar toda la altura de la pantalla */
     display: flex;
-    flex-direction: column;
-    justify-content: center;   /* centra verticalmente los elementos si quieres */
-    align-items: center;       /* centra horizontalmente */
-    padding: 2rem;
-    background-color: #343a40; /* fondo visible */
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    margin-left: auto;
+  }
+
+  .offcanvas-header,
+  .btn-close {
+    display: none;
+  }
+}
+
+/* --- VISTA MÓVIL --- */
+@media (max-width: 991px) {
+  .offcanvas-body {
+    background-color: #343a40;
+    text-align: center;
   }
 
   .navbar-nav {
     flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-    width: 100%;
-  }
-
-  .nav-item {
-    margin-bottom: 0.5rem;
+    gap: 1rem;
   }
 
   .offcanvas .botonNav {
     width: 100%;
-    margin-top: 1rem;
+  }
+  .botonNav{
+    min-width: 250px;
   }
 }
 

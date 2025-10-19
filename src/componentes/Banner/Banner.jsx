@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./Banner.css";
-import { Carousel } from "bootstrap"; // Importamos la clase Carousel
-
+import { Carousel } from "bootstrap"; 
 const Banner = () => {
   const carouselRef = useRef(null);
 
@@ -16,7 +15,7 @@ const Banner = () => {
   useEffect(() => {
     if (carouselRef.current) {
       new Carousel(carouselRef.current, {
-        interval: 3000, // Cambia automáticamente cada 3s
+        interval: 3000, 
         ride: "carousel"
       });
     }
