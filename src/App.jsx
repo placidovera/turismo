@@ -7,6 +7,7 @@ import Form from "./componentes/Form/Form";
 import Video from "./componentes/Video/Video";
 import Video2 from "./componentes/Video2/Video2";
 import Animacion from "./componentes/Animacion/Animacion";
+import Footer from "./componentes/Footer/Footer";
 
 const App = () => {
   const [activo, setActivo] = useState(true);
@@ -15,21 +16,23 @@ const App = () => {
     <div className={activo ? "body" : "on"}>
       <NavBar cambiarEstado={() => setActivo(!activo)} />
 
-      {activo ? (
-        // Vista inicial
-        <>
-          <Animacion/>
-          <Video/>
-        </>
-      ) : (
-        // Vista después de hacer click
-        <>
-          <Form />
-          <Banner />
-          <ItemOne />
-       
-        </>
-      )}
+      <main>
+        {activo ? (
+          <>
+            <Animacion />
+            <Video />
+          </>
+        ) : (
+          <>
+            <Form />
+            <Banner />
+            <ItemOne />
+          </>
+        )}
+      </main>
+
+      {/* Footer siempre visible */}
+      <Footer />
     </div>
   );
 };
