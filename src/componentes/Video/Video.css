@@ -11,17 +11,3 @@
   border-radius: 10px;
   margin-top: 2rem;
 }
-
-
-@media (max-width: 768px) {
-  .banner {
- 
-    position: absolute;
-    top: 21rem;
-    right: 1rem;
-    width: 310px;
-    height: auto;
-    overflow: hidden;
-}
-  }
-

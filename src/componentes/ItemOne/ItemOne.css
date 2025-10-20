@@ -34,8 +34,7 @@ h2{
 @media (max-width: 768px) {
 
 .container {
-   padding-left: 20px; /* reduce el espacio lateral */
-    max-width: 90%; 
+ display: none;
 }
     
 }

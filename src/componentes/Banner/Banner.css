@@ -13,5 +13,19 @@
   object-fit: cover;  
   display: block;
 }
-
+@media (max-width: 768px) {
+  .banner {
+ 
+    position: absolute;
+    top: 35rem;
+    right: 1rem;
+    width: 310px;
+    height: auto;
+    overflow: hidden;
+}
+h1, h2, h3 {
+  margin-left: 0.5rem;
+  margin-top: 2rem;
+}
+}
 
