@@ -23,7 +23,7 @@ const Banner = () => {
 
   return (
     <div className="banner">
-      <h2>Vuelos</h2>
+      <h2>Descubrí los mejores destinos del mundo</h2>
 
       <div ref={carouselRef} id="bannerCarousel" className="carousel slide">
         <div className="carousel-inner">

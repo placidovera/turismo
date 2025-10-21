@@ -1,7 +1,7 @@
 .banner {
   position: relative; /* antes absolute */
   margin: 2rem auto; /* centra horizontalmente */
-  width: 700px;
+  width: 900px;
   height: 400px;
   overflow: hidden;
 }
